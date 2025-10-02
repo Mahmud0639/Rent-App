@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rent_app/drawer/my_custom_drawer.dart';
 import 'package:rent_app/pages/home/controller.dart';
 import 'package:rent_app/pages/home/home_details.dart';
 import 'package:rent_app/widgets/big_text.dart';
 import 'package:rent_app/widgets/small_text.dart';
+import 'package:badges/badges.dart' as badges;
 
 class HomeView extends GetView<HomeController> {
   HomeView({super.key});
-
-  PageController pageController = PageController(viewportFraction: 0.75);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class HomeView extends GetView<HomeController> {
           textAlign: TextAlign.left,
         ),
       ),
+      drawer:MyCustomDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
@@ -32,9 +33,23 @@ class HomeView extends GetView<HomeController> {
             children: [
               Container(
                 alignment: Alignment.topRight,
-                child: Icon(
-                  Icons.notifications_none_outlined,
-                  color: Colors.black,
+                //notification with a red dot here
+                child: badges.Badge(
+                  position: badges.BadgePosition.topEnd(top: 4, end: 4),
+                  showBadge: true,
+                  ignorePointer: false,
+                  badgeStyle: badges.BadgeStyle(
+                    badgeColor: Colors.red,
+                    padding: EdgeInsets.all(4),
+                    shape: badges.BadgeShape.circle,
+                    elevation: 0,
+                  ),
+                  badgeContent: null,
+                  child: Icon(
+                   // Icons.notifications_none_outlined,
+                    CupertinoIcons.bell,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               Row(
@@ -42,8 +57,9 @@ class HomeView extends GetView<HomeController> {
                   Text(
                     "Jakarta",
                     style: TextStyle(
+                      fontFamily: "Lato",
                       fontSize: 24,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   Icon(Icons.keyboard_arrow_down_sharp, color: Colors.grey),
@@ -146,9 +162,10 @@ class HomeView extends GetView<HomeController> {
 
               SizedBox(height: 15),
 
+              //page view
+
               Obx(() {
-                final selectedTab =
-                    controller.tabs[controller.selectedIndex.value];
+                final selectedTab = controller.tabs[controller.selectedIndex.value];
                 final listData = controller.dummyData[selectedTab]!;
 
                 return SizedBox(
@@ -161,7 +178,7 @@ class HomeView extends GetView<HomeController> {
                     itemBuilder: (context, position) {
                       /*final tabName = controller.tabs[position];
                    final listData = controller.dummyData[tabName];*/
-                      final item = listData![position];
+                      final item = listData[position];
 
                       return Align(
                         alignment: Alignment.centerLeft,

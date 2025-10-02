@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rent_app/app_theme.dart';
+import 'package:rent_app/drawer/controller.dart';
 import 'package:rent_app/routes/app_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.put(DrawerControllerX());
   runApp(const MyApp());
 }
 

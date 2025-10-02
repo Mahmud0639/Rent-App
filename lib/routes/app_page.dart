@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-import 'package:rent_app/pages/home/bindings.dart';
-import 'package:rent_app/pages/home/view.dart';
+import 'package:rent_app/pages/home/index.dart';
 import 'package:rent_app/routes/app_routes.dart';
 
 class AppPage{
