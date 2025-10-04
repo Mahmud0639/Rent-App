@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rent_app/routes/app_page.dart';
 
 import '../../widgets/icon_widget.dart';
 import '../home/bindings.dart';
@@ -17,7 +18,9 @@ class Nearby extends StatelessWidget {
           children: [
             Text("Nearby Page",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
             GestureDetector(onTap: (){
-              Get.to(()=>HomeView(),binding: HomeBindings());
+              //Get.to(()=>HomeView(),binding: HomeBindings());
+              //We can also like this way
+              Get.toNamed(AppPage.INITIAL);
             },child: IconWidget(icon: Icons.arrow_back_ios))
           ],
         ),

@@ -16,7 +16,7 @@ class Dimensions{
   static double font_20 = screenHeight/32;
   static double font_24 = screenHeight/26.67;
 
-  static double searchBar_width = screenHeight/2.96;
+  static double searchBar_width_270 = screenHeight/2.96;
 
 
 

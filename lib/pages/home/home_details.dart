@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rent_app/pages/home/view.dart';
 import 'package:rent_app/widgets/big_text.dart';
 import 'package:rent_app/widgets/expandable_text.dart';
 import 'package:rent_app/widgets/icon_widget.dart';

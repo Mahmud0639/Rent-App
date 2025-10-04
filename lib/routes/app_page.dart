@@ -4,8 +4,9 @@ import 'package:rent_app/routes/app_routes.dart';
 
 class AppPage{
   static final INITIAL = AppRoutes.INITAIL;
+
   
   static List<GetPage> routes = [
-    GetPage(name: AppRoutes.INITAIL, page:()=> HomeView(),binding: HomeBindings())
+    GetPage(name: AppRoutes.INITAIL, page:()=> HomeView(),binding: HomeBindings()),
   ];
 }

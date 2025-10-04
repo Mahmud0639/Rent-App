@@ -44,6 +44,7 @@ class _ExpandableTextState extends State<ExpandableText> {
   Widget build(BuildContext context) {
     return ReadMoreText(
       widget.text,
+      textAlign: TextAlign.justify,
       trimLines: 2,
       trimMode: TrimMode.Line,
       trimCollapsedText: ' Show more',

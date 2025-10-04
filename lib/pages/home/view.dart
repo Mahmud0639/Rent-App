@@ -5,6 +5,7 @@ import 'package:rent_app/drawer/my_custom_drawer.dart';
 import 'package:rent_app/pages/home/controller.dart';
 import 'package:rent_app/pages/home/home_details.dart';
 import 'package:rent_app/widgets/big_text.dart';
+import 'package:rent_app/widgets/dimension.dart';
 import 'package:rent_app/widgets/small_text.dart';
 import 'package:badges/badges.dart' as badges;
 
@@ -72,8 +73,8 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 16),
-                    width: 270,
-                    height: 50,
+                    width: Dimensions.searchBar_width_270,
+                    height: Dimensions.height_50,
                     decoration: BoxDecoration(color: Colors.grey[50]),
                     child: Row(
                       children: [
@@ -108,6 +109,13 @@ class HomeView extends GetView<HomeController> {
               ),
 
               SizedBox(height: 15),
+
+
+
+
+
+
+
 
               //Tabs
               Container(
@@ -161,6 +169,16 @@ class HomeView extends GetView<HomeController> {
               ),
 
               SizedBox(height: 15),
+
+
+
+
+
+
+
+
+
+
 
               //page view
 
